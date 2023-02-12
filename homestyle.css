@@ -29,3 +29,7 @@ body {
 .bg-stripe{
     background-image: linear-gradient(to bottom, green, blue)
 }
+
+#top-page{
+  margin-bottom: 1em;
+}
