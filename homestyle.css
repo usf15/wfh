@@ -27,9 +27,19 @@ body {
     color: white;
   }
 .bg-stripe{
-    background-image: linear-gradient(to bottom, green, blue)
+    background-image: linear-gradient(green)
 }
 
-#topheader{
+.topbar{
+  width: 100%;
+  height: 35px;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
   background-color: #26be00;
+}
+
+.p-1{
+  padding: 1rem!important;
 }
