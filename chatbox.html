@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Chatbox</title>
+    <style>
+      #chatbox {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 20px;
+        max-height: 300px;
+        overflow-y: auto;
+      }
+      input[type="text"] {
+        padding: 5px 10px;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chatbox"></div>
+    <form>
+      <input type="text" id="message" placeholder="Enter your message...">
+      <button type="submit">Send</button>
+    </form>
+    
+    <script>
+      const chatbox = document.getElementById('chatbox');
+      const messageInput = document.getElementById('message');
+      const form = document.querySelector('form');
+
+      // Display a message in the chatbox
+      function displayMessage(message, timestamp) {
+        const p = document.createElement('p');
+        p.innerHTML = `${timestamp}: ${message}`;
+        chatbox.appendChild(p);
+      }
+
+      // Add a timestamp to a message
+      function addTimestamp(message) {
+        const now = new Date();
+        const timestamp = `${now.getHours()}:${now.getMinutes().toString().padStart(2, '0')}`;
+        displayMessage(message, timestamp);
+      }
+
+      // Handle form submission
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const message = messageInput.value.trim();
+        if (message) {
+          addTimestamp(message);
+          messageInput.value = '';
+        }
+      });
+    </script>
+  </body>
+</html>
