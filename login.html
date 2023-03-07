@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewpoint" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
-  <meta name="viewpoint" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="loginstyle.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="style_this_shit.css">
+  <title>Login Form</title>
 </head>
 
-<h2>Login Form</h2>
+<body style="background-image:url(istockphoto-1191658515-170667a.jpg); background-size:cover;">
+  
+  <body>
+	<div class="container">
+		<img src="bb0184bd7d946797c8ddd0893eeb4bb0-crowned-15-element.png" alt="avatar" class="avatar">
+		<form action="Login.php" method="post">
+			<label for="uname"><b>Username</b></label>
+			<input type="text" placeholder="Enter Username" id="username" name="uname" required>
 
-<form action="/action_page.php" method="post">
-  <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-  </div>
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" id="password" name="psw" required>
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+			<button type="submit" value="Log In">Login</button>
+			<label>
+				<input type="checkbox" checked="checked" name="remember"> Remember me
+			</label>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
+			<div class="container">
+				
+				<span class="psw"><a href="#">Forgot password?</a></span>
+			</div>
+		</form>
+	</div>
+</body>
+	
+	
+  
+</body>
 </html>
